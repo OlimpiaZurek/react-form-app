@@ -1,0 +1,5 @@
+export const GET_FORM_DATA = 'GET_FORM_DATA';
+export const SEND_FORM_DATA = 'SEND_FORM_DATA';
+
+export const SEND_DATA_SUCCESS = 'SEND_DATA_SUCCESS';
+export const SEND_DATA_FAILURE = 'SEND_DATA_ERROR';

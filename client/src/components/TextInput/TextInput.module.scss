@@ -1,0 +1,11 @@
+@import '../../styles/global.scss';
+
+.Input {
+    margin: $metrics-xs 0;
+    padding: $metrics-s;
+    width: 100%;
+}
+
+.Error {
+    color: $danger-color;
+}

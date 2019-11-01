@@ -1,0 +1,113 @@
+@import '../../styles/global.scss';
+
+.Calendar {
+    display: block;
+    width: 100%;
+    background: $neutral-color;
+    border: 1px solid $border-color;
+  }
+
+.CalendarHeader {
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Arrow {
+    appearance: none;
+	user-select: none;
+	outline: none !important;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	padding: 0;
+	border: none;
+	border-top: 0.7em solid transparent;
+	border-bottom: 0.7em solid transparent;
+	transition: all .25s ease-out;
+}
+
+.ArrowLeft {
+    border-right: 1.2em solid #ccc;
+	left: 1.5rem;
+	&:hover {
+		border-right-color: #06c;
+	}
+}
+
+.ArrowRight {
+    border-left: 1.2em solid #ccc;
+	right: 1.5rem;
+	&:hover {
+		border-left-color: #06c;
+	}
+}
+
+.CalendarMonth {
+    font-weight: 500;
+	font-size: 1.2em;
+	color: $main-color;
+	text-align: center;
+	padding: 0.5em 0.25em;
+	word-spacing: 5px;
+	user-select: none;
+}
+
+/* GRID */
+
+.Row {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50px;
+    border: 1px solid $border-color;
+  }
+  
+  .RowMiddle {
+    align-items: center;
+  }
+  
+  .Col {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $border-color;
+  }
+  
+  .ColStart {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .ColCenter {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .ColEnd {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .Disabled {
+    color: $text-color-light;
+    pointer-events: none;
+  }
+
+  .Selected {
+    background-color: $main-color;
+    color: $neutral-color;
+  }
+
+  .Num {
+    font-size: 82.5%;
+    line-height: 1;
+    text-align: center;;
+    font-weight: 700;
+  }

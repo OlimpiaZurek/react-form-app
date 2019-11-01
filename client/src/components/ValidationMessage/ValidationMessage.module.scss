@@ -1,0 +1,14 @@
+@import '../../styles/global.scss';
+
+.Message {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.Success {
+    color: $main-color;
+}
+
+.Error {
+    color: $danger-color;
+}
