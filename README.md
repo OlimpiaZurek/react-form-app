@@ -1,4 +1,4 @@
-# Github Users Search
+# Form Event App
 
 ## Table of contents
 
@@ -7,7 +7,7 @@
 * [Setup](#setup)
 
 ## General Info
-Smple app with React on the front end side and connected with simple API written with Node.js.
+Simple app with React on the front end side and connected with simple API written with Node.js.
 ## Technologies 
 
 Project is created with:
