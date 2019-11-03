@@ -22,7 +22,7 @@ const txtFieldState = {
   typeMismatch: false, 
 };
 
-class EventForm extends Component {
+export class EventForm extends Component {
 
   state = {
     currentDate: new Date(),
@@ -59,6 +59,7 @@ class EventForm extends Component {
       email: email.value,
       date: datefield.value
     };
+
 
     if (allFieldsValid) {
       this.props.actions.submitFormData(preparedData);
@@ -152,6 +153,9 @@ const mapDispatchToProps = (dispatch) => {
 
 EventForm.propTypes = {
   actions: PropTypes.object,
+  className: PropTypes.string,
+  status: PropTypes.string,
+  message: PropTypes.string,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventForm)

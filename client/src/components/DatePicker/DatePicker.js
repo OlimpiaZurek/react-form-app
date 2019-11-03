@@ -22,6 +22,7 @@ class DatePicker extends Component {
       isCalendarOpened: !this.state.isCalendarOpened
     });
   }
+  
   handleChange = (e) => {
     e.preventDefault();
   }
@@ -60,7 +61,8 @@ DatePicker.propTypes = {
  value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.instanceOf(Date)
- ])
+ ]),
+ onDateClick: PropTypes.func,
 };
 
 export default DatePicker;

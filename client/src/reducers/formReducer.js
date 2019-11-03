@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 
-export const form = (state = null, action) => {
+export const formReducer = (state = null, action) => {
   switch (action.type) {
     case actionTypes.SEND_FORM_DATA:
       const { data } = action;
