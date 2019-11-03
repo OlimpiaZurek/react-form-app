@@ -138,7 +138,7 @@ export class EventForm extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const { form } = state;
+  const { formReducer: form } = state;
   return {
     message: form && form.data.message,
     status: form && form.data.success
