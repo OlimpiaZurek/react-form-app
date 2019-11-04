@@ -25,7 +25,5 @@ export const submitFormData = data => dispatch =>
     } else {
       dispatch(sendFormFailure(data.message));
     }
-  })
-  .catch((err) => {
-    dispatch(sendFormFailure(err));
-});
+  });
+
