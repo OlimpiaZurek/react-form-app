@@ -137,7 +137,7 @@ export class EventForm extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
+export const mapStateToProps = (state, ownProps) => {
   const { formReducer: form } = state;
   return {
     message: form && form.data.message,
@@ -145,7 +145,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(actions, dispatch)
   }
