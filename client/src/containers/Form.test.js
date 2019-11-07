@@ -7,7 +7,6 @@ import TextInput from '../components/TextInput/TextInput';
 import DatePicker from '../components/DatePicker/DatePicker';
 import { mapStateToProps, mapDispatchToProps } from './Form';
 import * as actionTypes from '../actions/actionTypes';
-import { data } from '../common/mockData/mockData';
 
 const mockStore = configureStore({});
 
@@ -20,7 +19,6 @@ describe('<EventForm />', () => {
   let store;
   let wrapper;
   let wrapperInstance;
-
   beforeEach(() => {
     store = mockStore({});
     wrapper = shallow(
@@ -32,7 +30,7 @@ describe('<EventForm />', () => {
   afterEach(() => {
     wrapper = undefined;
     wrapperInstance = undefined;
-  })
+  });
 
   it('should render with given state from Redux store', () => {
     expect(wrapper).toMatchSnapshot();
@@ -58,6 +56,15 @@ describe('<EventForm />', () => {
 
   it('should render <DatePicker />', () => {
     expect(wrapper.find(DatePicker).length).toBe(1);
+  });
+
+  it('should sets handleChange to event.target.value', () => {
+    const event = { target: { name: 'firstname', value: 'test' } };
+    wrapperInstance.handleChange(event);
+    expect(wrapperInstance.state.firstname.value).toEqual(
+      event.target.value,
+      event.target.name,
+    );
   });
 
   it('should receives message props as ValidationMessage Text Prop', () => {
